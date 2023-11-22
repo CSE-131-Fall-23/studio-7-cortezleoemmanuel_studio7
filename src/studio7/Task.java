@@ -27,25 +27,26 @@ public class Task {
 			return length == width;
 		}
 		
+		public String compare(rectangle r2) {
+			if(area() == r2.area()) {
+				return "Same area";
+			}else if(area() > r2.area()) {
+				return "R1";
+			}else {
+				return "R2";
+			}	
+		}
+		
 	}
 	
-	public static String compare(rectangle r1, rectangle r2) {
-		if(r1.area() == r2.area()) {
-			return "Same area";
-		}else if(r1.area() > r2.area()) {
-			return "R1";
-		}else {
-			return "R2";
-		}	
-	}
 	
 	public static void main(String args[]) {
-		rectangle r1 = new rectangle(3,3);
-		rectangle r2 = new rectangle(3,3);
+		rectangle r1 = new rectangle(5,3);
+		rectangle r2 = new rectangle(3,4);
 		
 		System.out.println(r1.area());
 		System.out.println(r1.square());
-		System.out.println(compare(r1, r2));
+		System.out.println(r1.compare(r2));
 	}
 
 }

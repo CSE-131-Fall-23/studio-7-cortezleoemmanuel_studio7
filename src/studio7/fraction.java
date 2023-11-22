@@ -15,9 +15,9 @@ public class fraction {
 		int commonden = f1.den * f2.den;
 		return (f1.num * f2.den + f1.den * f2.num) + "/" + commonden;
 	}
-	public static String mult(fraction f1, fraction f2) {
+	public String mult(fraction f2) {
 	
-		return (f1.num * f2.num)  + "/" + (f1.den * f2.den);
+		return (this.num * f2.num)  + "/" + (this.den * f2.den);
 	}
 	
 	public String getFrac() {
@@ -31,7 +31,6 @@ public class fraction {
 public static void main(String args[]) {
 		fraction f1 = new fraction(7, 3);
 		fraction f2 = new fraction(3, 7);
-		System.out.println(mult(f1, f2));
-		
+		System.out.print(f1.mult(f2));	
 	}
 }
